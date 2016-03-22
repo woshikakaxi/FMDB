@@ -1,0 +1,15 @@
+PODS:
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
+  - XGFMDBManagers (0.0.6):
+    - FMDB (~> 2.0)
+
+DEPENDENCIES:
+  - XGFMDBManagers (~> 0.0.6)
+
+SPEC CHECKSUMS:
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  XGFMDBManagers: 571d76ddbe369fadb7af8f1f647f9c283b2c4f71
+
+COCOAPODS: 0.39.0
