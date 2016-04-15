@@ -22,7 +22,7 @@
 -(id)init{
     if (self = [super init]) {
        /*创建数据库存储路径*/
-        NSString * path = [NSHomeDirectory() stringByAppendingString:@"Documents/myApp.db"];
+        NSString * path = [NSHomeDirectory() stringByAppendingString:@"/Documents/woyouwoyao.db"];
         fmdb = [[FMDatabase alloc]initWithPath:path];
         
         [fmdb open];
@@ -50,6 +50,9 @@
 
 //数据修改方法插入数据
 -(void)insertSqlData:(id)data{
+    [fmdb open];
+    //插入数据的时候应避免插入相同数据所以应该判断该数据是否已经存在在这里我没有判断（根据每个人的需要进行先查询在判断）
+    
     UserModel *model = [[UserModel alloc]init];
     model = data;
     NSString *sql = @"insert into UserInfo(Userid,page,dic) values (?,?,?)";
